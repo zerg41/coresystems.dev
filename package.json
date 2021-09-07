@@ -1,0 +1,24 @@
+{
+  "name": "coresystems.dev",
+  "version": "1.0.0",
+  "description": "Core Systems Home website project",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.27.5",
+    "gulp": "^4.0.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zerg41/coresystems.dev.git"
+  },
+  "author": "zerg41",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zerg41/coresystems.dev/issues"
+  },
+  "homepage": "https://github.com/zerg41/coresystems.dev#readme"
+}
