@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Core Systems</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="img/fav/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/fav/favicon-16x16.png">
+
+    <!-- PWA Area -->
+    <link rel="manifest" href="/img/fav/site.webmanifest">
+
+    <!-- Connectors -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Fonts -->  
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/cs-styles.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="main-header fixed-top">
+        <h1 class="visually-hidden">Core Systems</h1> <!-- for SEO -->
+        <nav class="navbar">
+            <div class="container">
+                <!-- Brand -->
+                <a class="navbar-brand" href="index.html">
+                    <div class="d-flex">
+                        <!-- <div> -->
+                            <svg xmlns="https://www.w3.org/2000/svg">
+                                <circle class="brand-logo-circle" cx="25" cy="25" r="20"/>
+                            </svg>
+                        <!-- </div> -->
+                        <div class="d-flex flex-column align-self-center">
+                            <span class="brand-name brand-name-core">C O R E</span>
+                            <span class="brand-name brand-name-unit">S Y S T E M S</span>
+                        </div>
+                    </div>
+                </a>
+                <!-- Navigation -->
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">ГЛАВНАЯ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">УСЛУГИ</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
+                        href="#" role="button" aria-expanded="false">ПОРТФОЛИО</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Проекты</a></li>
+                            <li><a class="dropdown-item" href="#">Продукты</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">О КОМПАНИИ</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link active" href="#">СВЯЗАТЬСЯ С НАМИ</a>
+                    </li> -->
+                </ul>
+                <!-- Hidden Menu -->
+                <div class="nav-hidden">
+                    <button class="btn navbar-toggler" type="button" 
+                            data-bs-toggle="offcanvas" data-bs-target="#navbarContent"
+                            aria-controls="navbarContent" aria-label="Navigation">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </button>
+                    <div id="navbarContent" class="offcanvas offcanvas-end" tabindex="-1"
+                         aria-labelledby="offcanvasNavigation">
+                        <div class="container-fluid d-flex">
+                            <header class="row align-items-center justify-content-between">
+                                <a class="canvas-brand" href="index.html">
+                                    <div class="d-flex">
+                                        <svg xmlns="https://www.w3.org/2000/svg">
+                                            <circle class="brand-logo-circle" cx="25" cy="25" r="20"/>
+                                        </svg>
+                                        <div class="d-flex flex-column align-self-center">
+                                            <span class="brand-name brand-name-core">C O R E</span>
+                                            <span class="brand-name brand-name-unit">S Y S T E M S</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                <button class="btn-close text-reset" type="button"
+                                        data-bs-dismiss="offcanvas" aria-label="Close">
+                                </button>
+                            </header>
+                            <div class="menu-content row">
+                                <ul class="menu">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">ГЛАВНАЯ</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">УСЛУГИ</a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
+                                        href="#" role="button" aria-expanded="false">ПОРТФОЛИО</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#">Проекты</a></li>
+                                            <li><a class="dropdown-item" href="#">Продукты</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">О КОМПАНИИ</a>
+                                    </li>
+                                    <!-- <li class="nav-item">
+                                        <a class="nav-link active" href="#">СВЯЗАТЬСЯ С НАМИ</a>
+                                    </li> -->
+                                </ul>
+                            </div>
+                            <footer class="row align-items-center">
+                                <span>© 2021 Core Systems, LLC</span>
+                            </footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header> <!-- END HEADER-->
+
+    <!-- MAIN CONTENT -->
+    <main class="homepage">
+        <div class="container col-xxl-8 px-4 py-5">
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+              <div class="col-10 col-sm-8 col-lg-6">
+                <img src="/img/hero-demo-image.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+              </div>
+              <div class="col-lg-6">
+                <h2 class="display-10 fw-bold lh-1.5 mb-3">Эффективное решение cложных задач</h2>
+                <p class="lead">Мы создаем первоклассные приложения для вашего удобства!</p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                  <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Узнать больше</button>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <div class="container col-xxl-8 px-4 py-5">
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+              <div class="col-10 col-sm-8 col-lg-6">
+                <img src="/img/hero-demo-image.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+              </div>
+              <div class="col-lg-6">
+                <h2 class="display-10 fw-bold lh-1.5 mb-3">Эффективное решение cложных задач</h2>
+                <p class="lead">Мы создаем первоклассные приложения для вашего удобства!</p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                  <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Узнать больше</button>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="container col-xxl-8 px-4 py-5">
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+              <div class="col-10 col-sm-8 col-lg-6">
+                <img src="/img/hero-demo-image.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+              </div>
+              <div class="col-lg-6">
+                <h2 class="display-10 fw-bold lh-1.5 mb-3">Эффективное решение cложных задач</h2>
+                <p class="lead">Мы создаем первоклассные приложения для вашего удобства!</p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                  <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Узнать больше</button>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="container col-xxl-8 px-4 py-5">
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+              <div class="col-10 col-sm-8 col-lg-6">
+                <img src="/img/hero-demo-image.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+              </div>
+              <div class="col-lg-6">
+                <h2 class="display-10 fw-bold lh-1.5 mb-3">Эффективное решение cложных задач</h2>
+                <p class="lead">Мы создаем первоклассные приложения для вашего удобства!</p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                  <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Узнать больше</button>
+                </div>
+              </div>
+            </div>
+        </div>
+    </main> <!-- END MAIN CONTENT -->
+
+    <!-- FOOTER -->
+    <footer>
+    </footer> <!-- END FOOTER -->
+    
+    <!-- Java Script Files -->
+    <script src="/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
