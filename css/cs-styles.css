@@ -7,14 +7,17 @@
 
 /** GLOBAL **/
 body {
-    padding-top: 10vh; /*добавляет отступ от фиксированной шапки*/
     background-color: rgb(255, 255, 255);
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 16px;
 }
 
 /** HEADER **/
 /* Container */
+.main-header {
+    position: sticky;
+    top: 0;
+}
 .navbar {
     padding: 15px 0;
     /* background-color: #fff; */
