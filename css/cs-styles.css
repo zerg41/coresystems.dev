@@ -1,151 +1,197 @@
 @charset "UTF-8";
 /** Core Systems Styles **/
 :root {
-    --cs-color-main-primary-light: #151515;
+    --cs-color-bg-light: rgb(246,246,250);
+    --cs-color-nav-glassy-light: rgba(248, 249, 250, 0.8);
+    --cs-color-nav-opaque-light: rgb(248, 249, 250);
+
+    --cs-color-main-primary-light: #262626;
     --cs-color-accent-primary-light: #103ccc;
+    --cs-color-accent-secondary-light: #2a57e9;
+    --cs-color-accent-gray-light: #c0c0cf;
+
+    --cs-color-gradient-filler-light: #aec3d1b0;
+
 }
 
 /** GLOBAL **/
 body {
-    background-color: rgb(255, 255, 255);
+    background-color: var(--cs-color-bg-light);
     font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
+    font-size: 1rem;
+}
+section {
+    padding-top: 1rem;
+    padding-bottom: 80px;
+    text-align: center;
+}
+.section-header h4{
+    font-size: 4rem;
+    text-transform: uppercase;
+    color: #c0c0cf6e;
+    margin-bottom: -0.5rem;
+}
+.nav-link {
+    color: var(--cs-color-main-primary-light);
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.important-text {
+    color: var(--cs-color-accent-primary-light);
 }
 
 /** HEADER **/
-/* Container */
-.main-header {
-    position: sticky;
-    top: 0;
-}
+/* Menu */
 .navbar {
-    padding: 15px 0;
-    /* background-color: #fff; */
+    background-color: var(--cs-color-nav-glassy-light);
 }
-/* Brand */
 
-.navbar-brand svg {
-    width: 50px;
-    height: 50px;
-}
-.brand-logo-circle {
-    fill: var(--cs-color-main-primary-light);
-    cx: calc(25px);
-}
-.brand-name {
-    color: var(--cs-color-main-primary-light);
-    font-family: 'Montserrat', sans-serif;
-}
-.brand-name-core {
-    margin-top: 10px;
-    font-size: 1.1em;
-    line-height: 0.7;
-    font-weight: 700;
-}
-.brand-name-unit {
-    font-size: 0.62em;
-    text-align: center;
-    font-weight: 600;
+.nav a:hover {
     color: var(--cs-color-accent-primary-light);
 }
-
-/* Navigation */
-.nav .nav-item:hover {
+.nav a:focus {
     color: var(--cs-color-accent-primary-light);
+    outline: none;
 }
-.nav .nav-link {
-    color: var(--cs-color-main-primary-light);
-    font-weight: 600;
+/* Hidden Menu */
+/* burger button */
+.navbar-toggler { /* бургер */
+    height: 27px;
+    transition: box-shadow 0.2s;
 }
-
-/* Canvas */
-.nav-hidden { /* контейнер бургера */
-    margin-right: 15px;
+.navbar-toggler:hover{
+    box-shadow: 0 0 0.2rem 0.15rem var(--cs-color-main-primary-light);
 }
-button.navbar-toggler { /* бургер */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    height: 30px;
-    padding: 0;
-    cursor: pointer;
+.navbar-toggler:focus{
+    box-shadow: none;
 }
-button.navbar-toggler div { /* полоски бургера */
-    width: 30px;
+.navbar-toggler div { /* полоски бургера */
+    width: 1.5em;
     height: 2px;
     background-color: var(--cs-color-main-primary-light);
 }
-
-#navbarContent {
-    justify-content: space-between;
+.navbar-toggler div:nth-child(2) {
+    width: 1em;
+    align-self: center;
+}
+/* menu container */
+#hiddenMenu {
     width: 20rem;
-    height: 100%;
-    background-color: #fff;
-    padding: 20px 5px;
+    background-color: var(--cs-color-nav-opaque-light);
 }
-#navbarContent>div {
-    flex-direction: column;
-    justify-content: space-between;
-    width: 100%;
-    height: 100%;
-    background-color: #fff;
+/* menu content */
+.btn-close {
+    width: 1.5em;
+    height: 1.5em;
+    opacity: 0.8;
+    transition: transform 0.2s;
 }
-#navbarContent .row {
-    padding: 0 12px;
+.btn-close:focus {
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    box-shadow: none;
 }
-.canvas-brand {
-    width: auto;
-    padding: 0;
+.menu-spacer {
+    width: 90%;
+    align-self: center;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+.menu-list {
+    width: 90%;
+}
+.menu-list a {
+    padding: 0.5rem;
+    margin: 0.5em 0;
     text-decoration: none;
-    text-transform: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--cs-color-main-light);
+    border-radius: 0.3rem;
+    transition: background-color 0.5s;
 }
-.canvas-brand svg {
-    width: 50px;
-    height: 50px;
+.menu-list a:hover {
+    color: var(--cs-color-accent-primary-light);
 }
-.offcanvas-header {
-    align-items: flex-start;
+.menu-list a:focus {
+    background-color: var(--cs-color-accent-secondary-light);
+    color: #fff;
+    box-shadow: none;
 }
-div.menu-content {
-    height: 30rem;
+.menu-list .dropdown-menu {
+    position:initial;
     text-align: center;
-    text-decoration: none;
-
-}
-div.menu-content ul {
-    list-style-type: none;
-}
-.offcanvas-body .nav-item {
-    margin-bottom: 10px;
-}
-footer.row {
-    text-align: center;
+    min-width: 9rem;
 }
 
 
 /** MAIN **/
 /* Home Page */
+/* hero section */
+.home-hero {
+    background: linear-gradient(var(--cs-color-nav-glassy-light), 
+                                var(--cs-color-gradient-filler-light),
+                                var(--cs-color-bg-light)
+                                );
+    padding-top: 80px;
+    color: var(--cs-color-main-primary-light);
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+.home-hero>.container div {
+    width: 200px;
+}
+.home-hero img {
+    transition: transform 2s;
+    transform: scale(1, 1);
+}
+.home-hero img:hover {
+    transform: scale(1.2, 1.2);
+}
+/* intro section */
+.home-intro h3 {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 2.5rem;
+}
+.home-intro span {
+    font-size: 1.2rem;
+    border-left: 1px solid #262626;
+}
+.product-tile {
+    height: 250px;
+    border: 1px solid var(--cs-color-main-primary-light);
+}
+
+/** FOOTER **/
+.main-footer {
+    background-color: var(--cs-color-bg-light);
+}
+.copyright {
+    color: var(--cs-color-accent-gray-light);
+    font-size: 1.1rem;
+}
 
 
 /*** MEDIA QUERIES ***/
 /******** Large Devices ********/
 @media (min-width: 1200px) {
     /** HEADER **/
-    .nav-hidden {
+    .nav-hidden-menu {
         display: none;
     }
 }
 /******** Medium Devices ********/
 @media (min-width: 992px) and (max-width: 1199px) {
     /** HEADER **/
-    .nav-hidden {
+    .nav-hidden-menu {
         display: none;
     }
 }
 /******** Small Devices ********/
 @media (min-width: 768px) and (max-width: 991px) {
     /** HEADER **/
-    .nav-hidden {
+    .nav-hidden-menu {
         display: none;
     }
 }

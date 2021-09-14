@@ -36,18 +36,18 @@
 </head>
 <body>
     <!-- HEADER -->
-    <header class="main-header">
-        <h1 class="visually-hidden">Core Systems</h1> <!-- for SEO -->
-        <nav class="navbar">
+    <header class="main-header sticky-top"> <!-- WARN: IE doesn't support pos:sticky -->
+        <h1 class="visually-hidden">Core Systems</h1> <!-- INFO: for SEO -->
+        <nav class="navbar py-3">
             <div class="container-lg"> <!-- фиксим маргин контейнера для планшетов-->
                 <!-- Brand -->
                 <a class="navbar-brand" href="index.html">
-                    <img src="img/header-cs-logo.svg" alt="Core Systems">
+                    <img src="img/header-cs-logo.svg" alt="Core Systems Logo">
                 </a>
                 <!-- Navigation -->
                 <ul class="nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Главная</a>
+                        <a class="nav-link" href="index.html">Главная</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Услуги</a>
@@ -63,135 +63,260 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">О компании</a>
                     </li>
-                    <!-- <li class="nav-item">
-                        <a class="nav-link active" href="#">СВЯЗАТЬСЯ С НАМИ</a>
-                    </li> -->
                 </ul>
                 <!-- Hidden Menu -->
-                <div class="nav-hidden">
-                    <button class="btn navbar-toggler" type="button" 
-                            data-bs-toggle="offcanvas" data-bs-target="#navbarContent"
-                            aria-controls="navbarContent" aria-label="Navigation">
+                <nav class="nav-hidden-menu p-2">
+                    <button class="navbar-toggler d-flex flex-column justify-content-around p-0"
+                            type="button"
+                            data-bs-toggle="offcanvas" data-bs-target="#hiddenMenu"
+                            aria-controls="hiddenMenu" aria-label="Navigation">
                         <div></div>
                         <div></div>
                         <div></div>
                     </button>
-                    <div id="navbarContent" class="offcanvas offcanvas-end" tabindex="-1"
+                    <div id="hiddenMenu" class="offcanvas offcanvas-end" tabindex="-1"
                          aria-labelledby="offcanvasNavigation">
-                        <div class="container-fluid d-flex">
-                            <header class="row align-items-center justify-content-between">
-                                <a class="canvas-brand" href="index.html">
-                                    <div class="d-flex">
-                                        <svg xmlns="https://www.w3.org/2000/svg">
-                                            <circle class="brand-logo-circle" cx="25" cy="25" r="20"/>
-                                        </svg>
-                                        <div class="d-flex flex-column align-self-center">
-                                            <span class="brand-name brand-name-core">C O R E</span>
-                                            <span class="brand-name brand-name-unit">S Y S T E M S</span>
-                                        </div>
-                                    </div>
+                        <div class="container-fluid h-100 d-flex flex-column justify-content-between py-3">
+                            <header class="d-flex align-items-center justify-content-between">
+                                <a class="navbar-brand" href="index.html">
+                                    <img src="img/header-cs-logo.svg" alt="Core Systems Logo">
                                 </a>
-                                <button class="btn-close text-reset" type="button"
+                                <button class="btn-close text-reset m-2" type="button"
                                         data-bs-dismiss="offcanvas" aria-label="Close">
                                 </button>
                             </header>
-                            <div class="menu-content row">
-                                <ul class="menu">
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">Главная</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">Услуги</a>
-                                    </li>
-                                    <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
-                                        href="#" role="button" aria-expanded="false">Портфолио</a>
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="#">Проекты</a></li>
-                                            <li><a class="dropdown-item" href="#">Продукты</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">О компании</a>
-                                    </li>
-                                    <!-- <li class="nav-item">
-                                        <a class="nav-link active" href="#">СВЯЗАТЬСЯ С НАМИ</a>
-                                    </li> -->
-                                </ul>
-                            </div>
-                            <footer class="row align-items-center">
+                            <hr class="menu-spacer"></hr>
+                            <section class="menu-list d-flex flex-column flex-grow-1 align-self-center align-items-center">
+                                <a class="menu-item" href="index.html">Главная</a>
+                                <a class="menu-item" href="#">Услуги</a>
+                                <div class="dropdown">
+                                    <a id="dropPortfolioHidden" class="menu-item btn dropdown-toggle" data-bs-toggle="dropdown"
+                                    href="#" role="button" aria-expanded="false">Портфолио</a>
+                                    <ul class="dropdown-menu" aria-labelledby="dropPortfolioHidden">
+                                         <li><a class="dropdown-item" href="#">Проекты</a></li>
+                                         <li><a class="dropdown-item" href="#">Продукты</a></li>
+                                     </ul>
+                                </div>
+                                <a class="menu-item" href="#">О нас</a>
+                            </section>
+                            <hr class="menu-spacer"></hr>
+                            <footer class="text-center">
                                 <span>© 2021 Core Systems, LLC</span>
                             </footer>
                         </div>
                     </div>
-                </div>
+                </nav>
             </div>
         </nav>
     </header> <!-- END HEADER-->
 
     <!-- MAIN CONTENT -->
     <main class="homepage">
-        <div class="container col-xxl-8 px-4 py-5">
-            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-              <div class="col-10 col-sm-8 col-lg-6">
-                <img src="img/hero-demo.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
-              </div>
-              <div class="col-lg-6">
-                <h2 class="display-10 fw-bold lh-1.5 mb-3">Эффективное решение cложных задач</h2>
-                <p class="lead">Мы создаем первоклассные приложения для вашего удобства!</p>
-                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                  <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Узнать больше</button>
-                </div>
-              </div>
-            </div>
-        </div>
 
-        <div class="container col-xxl-8 px-4 py-5">
-            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-              <div class="col-10 col-sm-8 col-lg-6">
-                <img src="img/hero-demo-image.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
-              </div>
-              <div class="col-lg-6">
-                <h2 class="display-10 fw-bold lh-1.5 mb-3">Эффективное решение cложных задач</h2>
-                <p class="lead">Мы создаем первоклассные приложения для вашего удобства!</p>
-                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                  <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Узнать больше</button>
+        <!-- Hero -->
+        <section class="home-hero">
+            <div class="container d-flex flex-column flex-md-row justify-content-center
+                        align-items-center py-5 mb-3">
+                <div class="text-center text-md-end m-3">
+                    <span><b>эффективное</b></span><br>
+                    <span>решение</span>
                 </div>
-              </div>
-            </div>
-        </div>
-        <div class="container col-xxl-8 px-4 py-5">
-            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-              <div class="col-10 col-sm-8 col-lg-6">
-                <img src="img/hero-demo-image.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
-              </div>
-              <div class="col-lg-6">
-                <h2 class="display-10 fw-bold lh-1.5 mb-3">Эффективное решение cложных задач</h2>
-                <p class="lead">Мы создаем первоклассные приложения для вашего удобства!</p>
-                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                  <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Узнать больше</button>
+                <div class="d-flex flex-row justify-content-center">
+                    <img class="d-block img-fluid" src="img/core-circle-black.svg" alt="Core Circle" 
+                         width="120px" height="120px" loading="lazy">
                 </div>
-              </div>
-            </div>
-        </div>
-        <div class="container col-xxl-8 px-4 py-5">
-            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-              <div class="col-10 col-sm-8 col-lg-6">
-                <img src="img/hero-demo-image.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
-              </div>
-              <div class="col-lg-6">
-                <h2 class="display-10 fw-bold lh-1.5 mb-3">Эффективное решение cложных задач</h2>
-                <p class="lead">Мы создаем первоклассные приложения для вашего удобства!</p>
-                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                  <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Узнать больше</button>
+                <div class="text-center text-md-start m-3">
+                    <span><b>сложных</b></span><br>
+                    <span>задач</span>
                 </div>
-              </div>
             </div>
-        </div>
+        </section>
+
+        <!-- Introduction -->
+        <section class="home-intro">
+            <div class="container d-flex flex-column flex-md-row justify-content-between  py-3">
+                <header class="col-md-6 py-3 pe-md-4 text-md-end">
+                    <h3>займитесь важным</h3>
+                    <!-- <p class="lead">а остальную работу предоставьте Core&nbspSystems</p> -->
+                    <p class="lead">остальное возьмем на себя</p>
+                </header>
+                <div class="d-flex flex-column text-md-start py-2 py-md-0">
+                    <span class="ps-md-4 mt-3">Мы команда специалистов по <p class="important-text">разработке программного обеспечения</p></span>
+                    <span class="ps-md-4 mt-3">Помогаем предпринимателям и компаниям достигать поставленных целей, создавая эффективные и удобные&nbspв&nbspиспользовании сайты и приложения</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Preview -->
+        <section class="home-services">
+            <div class="container py-3">
+                <header class="section-header">
+                    <h4>услуги</h4>
+                </header>
+                <div class="row text-center">
+                    <article class="service-tile col-md-3 mb-4">
+                        <img src="img/services-analytics.svg" alt="Analytics"
+                             width="100px" height="100px">
+                        <h5 class="service-tile-title">Аналитика</h5>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta, impedit?
+                        </p>
+                        <button class="btn btn-secondary" href="#">Подробнее »</button>
+                    </article>
+                    <article class="service-tile col-md-3 mb-4">
+                        <img src="img/services-design.svg" alt="Design"
+                             width="100px" height="100px">
+                        <h5 class="service-tile-title">Дизайн</h5>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta, impedit?
+                        </p>
+                        <button class="btn btn-secondary" href="#">Подробнее »</button>
+                    </article>
+                    <article class="service-tile col-md-3 mb-4">
+                        <img src="img/services-development.svg" alt="Development"
+                             width="100px" height="100px">
+                        <h5 class="service-tile-title">Разработка</h5>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta, impedit?
+                        </p>
+                        <button class="btn btn-secondary" href="#">Подробнее »</button>
+                    </article>
+                    <article class="service-tile col-md-3 mb-4">
+                        <img src="img/services-promotion.svg" alt="Promotion"
+                             width="100px" height="100px">
+                        <h5 class="service-tile-title">Продвижение</h5>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta, impedit?
+                        </p>
+                        <button class="btn btn-secondary" href="#">Подробнее »</button>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Preview -->
+        <section class="home-projects">
+            <header class="section-header">
+                <h4>проекты</h4>
+            </header>
+            <div id="homeProjectsCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#homeProjectsCarousel" data-bs-slide-to="0" class="active" aria-label="Slide 1" aria-current="true"></button>
+                  <button type="button" data-bs-target="#homeProjectsCarousel" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
+                  <button type="button" data-bs-target="#homeProjectsCarousel" data-bs-slide-to="2" aria-label="Slide 3" class=""></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <svg class="bd-placeholder-img" width="100%" height="300px"
+                         xmlns="http://www.w3.org/2000/svg" aria-hidden="true" 
+                         preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <rect width="100%" height="100%" fill="#777"></rect>
+                    </svg>
+                    <div class="container">
+                      <div class="carousel-caption text-start">
+                        <h1>Example headline.</h1>
+                        <p>Some representative placeholder content for the first slide of the carousel.</p>
+                        <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <svg class="bd-placeholder-img" width="100%" height="300px"
+                         xmlns="http://www.w3.org/2000/svg" aria-hidden="true" 
+                         preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <rect width="100%" height="100%" fill="#777"></rect>
+                    </svg>
+                    <div class="container">
+                      <div class="carousel-caption text-start">
+                        <h1>Example headline.</h1>
+                        <p>Some representative placeholder content for the first slide of the carousel.</p>
+                        <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <svg class="bd-placeholder-img" width="100%" height="300px"
+                         xmlns="http://www.w3.org/2000/svg" aria-hidden="true" 
+                         preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <rect width="100%" height="100%" fill="#777"></rect>
+                    </svg>
+                    <div class="container">
+                      <div class="carousel-caption text-start">
+                        <h1>Example headline.</h1>
+                        <p>Some representative placeholder content for the first slide of the carousel.</p>
+                        <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#homeProjectsCarousel" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#homeProjectsCarousel" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </section>
+
+        <!-- Products Preview -->
+        <section class="home-products">
+            <header class="section-header">
+                <h4>продукты</h4>
+            </header>
+            <div class="container d-flex flex-column flex-md-row justify-content-between py-3">
+
+                <article class="product-tile row align-items-end col-md-4 mb-3">
+                    <div class="text-start">
+                        <h5>Product Name</h5>
+                        <p>Product description</p>
+                    </div>
+                </article>
+
+                <article class="product-tile row align-items-end col-md-4 mb-3">
+                    <div class="text-start">
+                        <h5>Product Name</h5>
+                        <p>Product description</p>
+                    </div>
+                </article>
+
+                <article class="product-tile row align-items-end col-md-4 mb-3">
+                    <nav class="text-start">
+                        <h5>Product Name</h5>
+                        <p>Product description</p>
+                    </nav>
+                </article>
+            </div>
+        </section>
     </main> <!-- END MAIN CONTENT -->
 
     <!-- FOOTER -->
-    <footer>
+    <footer class="main-footer">
+        <div class="container">
+            <nav class="d-flex flex-column flex-md-row text-center justify-content-center my-5">
+                <a class="nav-link mx-md-5" href="#">контакты</a>
+                <a class="nav-link mx-md-5" href="#">политика конфиденциальности</a>
+                <a class="nav-link mx-md-5" href="#">вакансии</a>
+            </nav>
+            <hr>
+            <nav class="d-flex justify-content-center my-5">
+                <a class="mx-5" href="index.html">
+                    <img src="img/social-vk.svg" alt="VK">
+                </a>
+                <a class="mx-5" href="index.html">
+                    <img src="img/social-fb.svg" alt="Facebook">
+                </a>
+                <a class="mx-5" href="index.html">
+                    <img src="img/social-ig.svg" alt="Instagram">
+                </a>
+            </nav>
+            <footer class="mt-5 text-center">
+                <p class="copyright">© 2021 | Core Systems, LLC</p>
+            </footer>
+
+        </div>
+
     </footer> <!-- END FOOTER -->
     
     <!-- Java Script Files -->

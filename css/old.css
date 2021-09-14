@@ -1,0 +1,34 @@
+/* Container */
+.main-header {
+    position: sticky;
+    top: 0;
+}
+.navbar {
+    padding: 15px 0;
+    /* background-color: #fff; */
+}
+/* Brand */
+.navbar-brand svg {
+    width: 50px;
+    height: 50px;
+}
+.brand-logo-circle {
+    fill: var(--cs-color-main-primary-light);
+    /* cx: calc(25px); */
+}
+.brand-name {
+    color: var(--cs-color-main-primary-light);
+    font-family: 'Montserrat', sans-serif;
+}
+.brand-name-core {
+    margin-top: 10px;
+    font-size: 1.1em;
+    line-height: 0.7;
+    font-weight: 700;
+}
+.brand-name-unit {
+    font-size: 0.62em;
+    text-align: center;
+    font-weight: 600;
+    color: var(--cs-color-accent-primary-light);
+}
